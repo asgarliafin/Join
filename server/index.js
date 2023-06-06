@@ -2,9 +2,9 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const { db } = require("./config/db");
-const { bookRoutes } = require("./routes/bookRoutes");
 const { countryRoutes } = require("./routes/countryRoutes");
 const { writerRoutes } = require("./routes/writerRoutes");
+const { bookRoutes } = require("./routes/bookRoutes");
 
 require("dotenv").config();
 
@@ -19,11 +19,8 @@ db.connect();
 
 app.use(express.json());
 
-// app.use("/todos/api", todoRoutes);
-app.use("/book/api", bookRoutes);
-app.use("/country/api", countryRoutes);
-app.use("/writer/api", writerRoutes);
+app.use("/book/data", bookRoutes);
+app.use("/country/data", countryRoutes);
+app.use("/author/data", writerRoutes);
 
-app.listen(8000, () => {
-  console.log("listening port 8000");
-});
+app.listen(8000);

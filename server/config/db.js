@@ -5,7 +5,7 @@ const db = {
   connect: async () => {
     try {
       await mongoose.connect(
-        "mongodb+srv://Elminm:uVC1S2C44r7RIuvE@cluster0.kuxordu.mongodb.net/"
+        "mongodb+srv://afinea:BARcelona1899@cluster0.ydi3ruz.mongodb.net/bookmarkdb"
       );
       console.log("CONNECTED!");
     } catch (error) {
